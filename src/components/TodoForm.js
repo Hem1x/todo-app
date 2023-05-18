@@ -10,9 +10,9 @@ const TodoForm = ({addTodo}) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type='text' value={value} onChange={(e) => setValue(e.target.value)}/>
-      <button>Add Todo</button>
+    <form className="TodoForm" onSubmit={handleSubmit}>
+      <input className="todo-input" type='text' placeholder='Enter the task' value={value} onChange={(e) => setValue(e.target.value)}/>
+      <button className='todo-btn'>Add Todo</button>
     </form>
   )
 }

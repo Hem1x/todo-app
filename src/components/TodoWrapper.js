@@ -3,7 +3,7 @@ import TodoForm from './TodoForm'
 import Todo from './Todo'
 import {v4 as uuidv4} from 'uuid'
 import EditFormTodo from './EditFormTodo'
-import RunListButton from './runList/RunListButton'
+import RunListButton from './RunListButton'
 
 const TodoWrapper = () => {
 
@@ -42,14 +42,34 @@ const TodoWrapper = () => {
     }
 
     return (
-        <div>
+        <div className="TodoWrapper">
             <h1>Todo app</h1>
+
+            <div className='runListBtns'>
+                <RunListButton onClick={deleteCompleted}>Delete Completed</RunListButton>
+                <RunListButton onClick={() => setTodos([])}>Reset List</RunListButton>
+            </div>
+
             <TodoForm addTodo={addTodo} />
-            <RunListButton onClick={deleteCompleted}>Delete Completed</RunListButton>
-            <RunListButton onClick={() => setTodos([])}>Reset List</RunListButton>
-            {todos.map(todo => todo.isEditing ? 
-                (<EditFormTodo key={todo.id} todo={todo} editTodo={editTodo}/>) : 
-                    (<Todo key={todo.id} todo={todo} deleteTodo={deleteTodo} completeTodo={completeTodo} openEdit={openEdit} />))}
+            
+            {
+                todos.length ? 
+                
+                (todos.map(todo => todo.isEditing ? 
+                    (<EditFormTodo 
+                        key={todo.id} 
+                        todo={todo} 
+                        editTodo={editTodo}/>)  
+                    :
+                    (<Todo 
+                        key={todo.id} 
+                        todo={todo} 
+                        deleteTodo={deleteTodo} 
+                        completeTodo={completeTodo} 
+                        openEdit={openEdit} />))) 
+                : 
+                (<h4>No todos</h4>)
+            }
 
         </div>
     )

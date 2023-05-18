@@ -1,43 +1,145 @@
+body {
+  background: #f8e5ca;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin: 0  0 2rem;
+  font-size: 1.75rem;
 }
 
-.active {
-  color: red;
-  text-decoration: line-through;
+button {
+  border-radius: .5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TodoWrapper {
+  background: #f7f6ba;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TodoForm {
+  width: 100%;
+}
+
+
+/* Input  */
+
+.todo-input {
+  outline: none;
+  background: #002fff1e;
+  border: 1px solid #00000033;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  width: 200px;
+  transition: .4s;
+}
+
+.todo-input::placeholder {
+  color: #0000004d;
+}
+
+.todo-input:hover {
+  transition: .4s;
+  transform: scale(1.02);
+}
+
+
+/* todo Button */
+
+.todo-btn {
+  background: #000000;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.todo-btn:hover {
+  background: rgb(49, 49, 49);
+  transition: .4s;
+  transform: scale(1.05);
+}
+
+
+/* Todo */
+
+.Todo {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  background: #000000;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.Todo.completed {
+  background-color: #2a8c39;
+  text-decoration: line-through;
+  transition: .4s;
+}
+
+/* TODO ICONS */
+
+.todoIcons {
+  display: flex;
+  gap: 20px;
+}
+
+.todoIcon {
+  font-size: 20px;
+  transition: .4s;
+  transform: scale(1);
+}
+
+.todoIcon.delete:hover {
+  color: red;
+  transition: .4s;
+  transform: scale(1.4);
+}
+ 
+.todoIcon.edit:hover {
+  color: rgb(253, 246, 53);
+  transition: .4s;
+  transform: scale(1.4);
+}
+ 
+/* RUN LIST BUTTONS */
+.runListBtns {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
+
+/* ff4d4d f7f6ba*/
+.runListBtn {
+  background-color: #ff4d4d;
+  border: 3px solid #78000000;
   color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: .2s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.runListBtn:hover {
+  background-color: #b11919;
+  transition: .2s;
+  transform: scale(1.05);
 }

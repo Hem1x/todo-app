@@ -4,10 +4,12 @@ import {BsPencil} from 'react-icons/bs'
 
 const Todo = ({todo, deleteTodo, completeTodo, openEdit}) => {
   return (
-    <div>
-      <h3 className={todo.isCompleted ? 'active' : ''} onClick={() => completeTodo(todo.id)}>{todo.text}</h3>
-      <BsPencil onClick={() => openEdit(todo.id)}/>
-      <AiOutlineDelete onClick={() => deleteTodo(todo.id)}/>
+    <div className={`Todo${todo.isCompleted ? ' completed' : ''}`} onClick={() => completeTodo(todo.id)}>
+      <h3>{todo.text}</h3>
+      <div className='todoIcons' onClick={(e) => e.stopPropagation()}>
+        <BsPencil className='todoIcon edit' onClick={() => openEdit(todo.id)}/>
+        <AiOutlineDelete className='todoIcon delete' onClick={() => deleteTodo(todo.id)}/>
+      </div>
     </div>
   )
 }
