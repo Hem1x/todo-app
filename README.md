@@ -8,10 +8,31 @@ Todo приложение
 
 ## Технологии
 
-![React](https://img.shields.io/badge/-React-61daf8?logo=react&logoColor=black)
-![HTML5](https://img.shields.io/badge/-HTML5-e34f26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/-CSS3-1572b6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/-JavaScript-f7df1e?logo=javaScript&logoColor=black)
+
+<table width='100%'>
+  <tr>
+    <td align="center" width="110" height="90">
+      <img src="https://brandlogos.net/wp-content/uploads/2020/09/react-logo.png" width="36" height="36" alt="React" />
+      <br>React JS
+    </td>
+    <td align="center" width="110" height="90">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" width="36" height="36" alt="javascript" />
+      <br>Javascript
+    </td>
+    <td align="center" width="110" height="90">
+      <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" width="36" height="36" alt="html" />
+      <br>HTML5
+    </td>
+        <td align="center" width="110" height="90"> 
+        <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" width="36" height="36" alt="css" />
+      <br>CSS3
+    </td>
+     <td align="center" width="110" height="90"> 
+      <img src="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg" width="36" height="36" alt="github"/>
+      <br>Github
+    </td>
+  </tr> 
+</table>
 
 ## Запуск проекта
 
